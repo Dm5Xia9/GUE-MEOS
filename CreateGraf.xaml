@@ -1,0 +1,36 @@
+﻿<Window x:Class="GUE_MEOS.CreateGraf"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GUE_MEOS"
+        mc:Ignorable="d"
+        Title="CreateGraf" Height="450" Width="908.69">
+    <Grid Background="#FF3A3131">
+        <Label Content="Создание координатной плоскости" Margin="10,10,0,0" Height="42" Width="360" Style="{StaticResource CreatGrafLabelN}" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <Canvas>
+            <TextBox Canvas.Left="448" Canvas.Top="21" Width="416" Background="#FF494444" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" FontFamily="Segoe UI Semilight" Foreground="White"/>
+            <ListBox x:Name="ListCord" Canvas.Left="448" Canvas.Top="80" Height="305" Width="416" Background="#FF3A3131" BorderBrush="#FF3A3131">
+                <ListBoxItem x:Name="DeckSystemCord">
+                    <TextBlock Style="{StaticResource ListBoxItemStyle}"><Run Text="Декатова система координат"/></TextBlock>
+                </ListBoxItem>
+                <ListBoxItem x:Name="PolarSystemCord">
+                    <TextBlock Style="{StaticResource ListBoxItemStyle}"><Run Text="Полярная система координат"/></TextBlock>
+                </ListBoxItem>
+
+
+            </ListBox>
+            <Label Content="Название:" Height="28" Width="80"  VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="22" Canvas.Top="75" Foreground="White" FontFamily="Segoe UI Semilight" FontSize="14"/>
+            <TextBox x:Name="NameGraf" Canvas.Left="107" Canvas.Top="80" Width="263" Background="#FF494444" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Segoe UI Semilight" FontSize="16" Foreground="White"/>
+            <Label Content="Ширина:" Height="28" Width="80"  VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="22" Canvas.Top="146" Foreground="White" FontFamily="Segoe UI Semilight" FontSize="14"/>
+            <TextBox x:Name="HeightGraf" Canvas.Left="107" Canvas.Top="151" Width="77" Background="#FF494444" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Segoe UI Semilight" FontSize="16" Foreground="White"/>
+            <Label Content="Длина:" Height="28" Width="63"  VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="225" Canvas.Top="146" Foreground="White" FontFamily="Segoe UI Semilight" FontSize="14"/>
+            <TextBox x:Name="WidthGraf" Canvas.Left="293" Canvas.Top="151" Width="77" Background="#FF494444" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Segoe UI Semilight" FontSize="16" Foreground="White"/>
+            <Label Content="Цвет:" Height="28" Width="52"  VerticalAlignment="Top" HorizontalAlignment="Left" Canvas.Left="36" Canvas.Top="209" Foreground="White" FontFamily="Segoe UI Semilight" FontSize="14"/>
+            <TextBox x:Name="ColorGraf" Canvas.Left="107" Canvas.Top="212" Width="263" Background="#FF494444" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Segoe UI Semilight" FontSize="16" Foreground="White"/>
+        </Canvas>
+        <Button x:Name="CreateGrafOk" Click="CreateGrafOk_Click" HorizontalAlignment="Right" Margin="0,0,10.4,10" VerticalAlignment="Bottom" Width="89" Background="#FF494444" Foreground="White"  Height="19"><Run Text="Создать"/>
+            
+        </Button>
+    </Grid>
+</Window>
