@@ -10,7 +10,7 @@ using System.Windows.Shapes;
 namespace GUE_MEOS
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для MainWindow.xaml Ебать ааааааааааааааааа
     /// </summary>
     public partial class MainWindow : Window
     {
