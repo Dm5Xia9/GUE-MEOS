@@ -58,6 +58,8 @@
     <Compile Include="CreateGraf.xaml.cs">
       <DependentUpon>CreateGraf.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CreateMenu.cs" />
+    <Compile Include="Paint.cs" />
     <Compile Include="TextCheck.cs" />
     <Compile Include="Topology.cs" />
     <Page Include="CreateGraf.xaml">

@@ -9,13 +9,13 @@
     <Grid>
         <Menu Width="28" HorizontalAlignment="Left" Background="#FF3A3131">
             <Ellipse Height="20" Width="13"  Margin="0"/>
-            <MenuItem Header="F" Style="{StaticResource ButtonLeftPanel}" Click="FClick">
-            </MenuItem>
+            <MenuItem Header="F" Style="{StaticResource ButtonLeftPanel}" Click="FClick"/>
+            <MenuItem Header="P" Style="{StaticResource ButtonLeftPanel}" Click="PClick"/>
 
         </Menu>
-        <Grid x:Name="WinCordPlos" Margin="28,20,-0.4,0" Background="#FF494444" >
-
-            <Canvas x:Name="CordPlos" >
+        <Grid x:Name="WinCordPlos" Margin="28,20,-0.4,0" Background="#FF494444" MouseDown="CordPlos_MouseDown">
+            
+            <Canvas x:Name="CordPlos">
                 <TextBox x:Name="FFF" Height="23" Canvas.Left="140" TextWrapping="Wrap" Canvas.Top="241" Width="555"/>
                 
             </Canvas>

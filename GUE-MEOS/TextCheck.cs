@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace GUE_MEOS
 {
-    
-    class TextCheck
+
+    public class TextCheck
     {
         Topology topology = new Topology();
-        public List<double> Tex(string tes)
+        int Ot;
+        int Do;
+        public List<double> Tex(string tes, int _Ot, int _Do, string DetectedTypeGraf)
         {
-            
+            Ot = _Ot;
+            Do = _Do;
             string good = "";
             List<double> ResOtv = new List<double>();
             int caunot = 0;
@@ -75,22 +75,23 @@ namespace GUE_MEOS
 
 
             }
-            
-            if (good != "")
-            {
-                if (caunpos == caunot)
-                {
-                    if (good[good.Length - 1] == '*' || good[good.Length - 1] == ' ' || good[good.Length - 1] == '-')
-                    {
 
-                    }
-                        
-                    else if (true)
-                        ResOtv = Formul(good);
+            if (good != "" && DetectedTypeGraf == "F" && caunpos == caunot)
+            {
+                if (!(good[good.Length - 1] == '*' || good[good.Length - 1] == ' ' || good[good.Length - 1] == '-'))
+                {
+                    ResOtv = Formul(good);
+                }
+            }
+            else if (good != "" && DetectedTypeGraf == "P" && caunpos == caunot)
+            {
+                if (!(good[good.Length - 1] == '*' || good[good.Length - 1] == ' ' || good[good.Length - 1] == '-'))
+                {
+                    ResOtv = Formul(good);
                 }
             }
             return ResOtv;
-            
+
         }
         public static List<string> ToRPN(string initialString, string ran)
         {
@@ -98,6 +99,11 @@ namespace GUE_MEOS
             string lastOperation;
             Stack<string> operationsStack = new Stack<string>();
             initialString = initialString.Replace("x", ran);
+            initialString = initialString.Replace("t", ran);
+            initialString = initialString.Replace("--", "");
+            initialString = initialString.Trim();
+            //if (initialString[0] == '+')
+            //    initialString = initialString.Trim(new char[] { '+' });
             String pattern = @"([ ])";
             string[] initialStri = Regex.Split(initialString, pattern);
             //List<string> inin = new List<string>();
@@ -287,7 +293,7 @@ namespace GUE_MEOS
         {
             var ResOtv = new List<double>();
 
-            for (int j = topology.CauntTextOt; j >= topology.CauntTextDo; j--)
+            for (int j = Ot; j <= Do; j++)
             {
                 List<string> result = ToRPN(Formula, Convert.ToString(j));
                 for (int i = 0; i < result.Count; i++)

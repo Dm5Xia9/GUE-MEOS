@@ -21,6 +21,7 @@ namespace GUE_MEOS
     {
         //Объект класса с гравным окном
         MainWindow mainWindow;
+        Topology topology = new Topology(4);
         
         public CreateGraf(MainWindow f)
         {
@@ -37,8 +38,12 @@ namespace GUE_MEOS
         {
             if(DeckSystemCord.IsSelected == true)
             {
+                topology.NameGraf = NameGraf.Text;
+                topology.HeightGraf = Convert.ToInt32(HeightGraf.Text);
+                topology.WidthGraf = Convert.ToInt32(WidthGraf.Text);
+
                 //вызов функции для отрисовки декатовых координат
-                mainWindow.GrafDeckCreate(NameGraf.Text, Convert.ToInt32(HeightGraf.Text), Convert.ToInt32(WidthGraf.Text));
+                mainWindow.GrafDeckCreate(topology);
                 //Закрытие окна с созданием графика
                 this.Close();
             }

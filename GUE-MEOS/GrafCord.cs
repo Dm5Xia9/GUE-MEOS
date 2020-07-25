@@ -47,8 +47,8 @@ namespace GUE_MEOS
                 VertLinePlosRight.X2 = i * topology.Format + actualWidth / 2;
                 VertLinePlosRight.Y1 = 0;
                 VertLinePlosRight.Y2 = actualHeight;
-                VertLinePlosRight.Stroke = Brushes.White;
-                VertLinePlosRight.StrokeDashArray = topology.StrokeDashArray;
+                VertLinePlosRight.Stroke = new SolidColorBrush(Color.FromRgb(126, 124, 124));
+                //VertLinePlosRight.StrokeDashArray = topology.StrokeDashArray;
                 CordPlos.Children.Add(VertLinePlosRight);
             }
 
@@ -59,8 +59,8 @@ namespace GUE_MEOS
                 VertLinePlosLeft.X2 = -i * topology.Format + actualWidth / 2;
                 VertLinePlosLeft.Y1 = 0;
                 VertLinePlosLeft.Y2 = actualHeight;
-                VertLinePlosLeft.Stroke = Brushes.White;
-                VertLinePlosLeft.StrokeDashArray = topology.StrokeDashArray;
+                VertLinePlosLeft.Stroke = new SolidColorBrush(Color.FromRgb(126, 124, 124));
+                //VertLinePlosLeft.StrokeDashArray = topology.StrokeDashArray;
                 CordPlos.Children.Add(VertLinePlosLeft);
             }
 
@@ -71,8 +71,8 @@ namespace GUE_MEOS
                 GorisLinePlosRight.X2 = actualWidth;
                 GorisLinePlosRight.Y1 = i * topology.Format + actualHeight / 2;
                 GorisLinePlosRight.Y2 = i * topology.Format + actualHeight / 2;
-                GorisLinePlosRight.Stroke = Brushes.White;
-                GorisLinePlosRight.StrokeDashArray = topology.StrokeDashArray;
+                GorisLinePlosRight.Stroke = new SolidColorBrush(Color.FromRgb(126, 124, 124));
+                //GorisLinePlosRight.StrokeDashArray = topology.StrokeDashArray;
                 CordPlos.Children.Add(GorisLinePlosRight);
             }
 
@@ -83,8 +83,8 @@ namespace GUE_MEOS
                 GorisLinePlosLeft.X2 = actualWidth;
                 GorisLinePlosLeft.Y1 = -i * topology.Format + actualHeight / 2;
                 GorisLinePlosLeft.Y2 = -i * topology.Format + actualHeight / 2;
-                GorisLinePlosLeft.Stroke = Brushes.White;
-                GorisLinePlosLeft.StrokeDashArray = topology.StrokeDashArray;
+                GorisLinePlosLeft.Stroke = new SolidColorBrush(Color.FromRgb(126, 124, 124));
+                //GorisLinePlosLeft.StrokeDashArray = topology.StrokeDashArray;
                 CordPlos.Children.Add(GorisLinePlosLeft);
             }
 
